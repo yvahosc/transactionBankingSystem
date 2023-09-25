@@ -1,0 +1,1610 @@
+{
+	"info": {
+		"_postman_id": "80275ae5-7fe0-449d-9463-b5870ddd3be0",
+		"name": "Transaction banking system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16910958"
+	},
+	"item": [
+		{
+			"name": "Person",
+			"item": [
+				{
+					"name": "Create person",
+					"item": [
+						{
+							"name": "Create person: wrong Id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"83963\",\r\n    \"firstName\": \"Nombre\",\r\n    \"lastName\": \"Apellido\",\r\n    \"email\": \"napellido@gmail.com\",\r\n    \"phone\": \"+57-3004469987\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/persons",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"persons"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create person: wrong name",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"8396318\",\r\n    \"firstName\": \"Nombre2\",\r\n    \"lastName\": \"Apellido\",\r\n    \"email\": \"napellido@gmail.com\",\r\n    \"phone\": \"+57-3004469987\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/persons",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"persons"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create person: wrong lastname",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"8396318\",\r\n    \"firstName\": \"Nombre\",\r\n    \"lastName\": \"Apellido2\",\r\n    \"email\": \"napellido@gmail.com\",\r\n    \"phone\": \"+57-3004469987\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/persons",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"persons"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create person: wrong phone",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"8396318\",\r\n    \"firstName\": \"Nombre\",\r\n    \"lastName\": \"Apellido\",\r\n    \"email\": \"napellido@gmail.com\",\r\n    \"phone\": \"+573004469987\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/persons",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"persons"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create person: wrong email",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"8396318\",\r\n    \"firstName\": \"Nombre\",\r\n    \"lastName\": \"Apellido\",\r\n    \"email\": \"napellidogmail.com\",\r\n    \"phone\": \"+57-3004469987\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/persons",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"persons"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create person: wrong some things",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"83963\",\r\n    \"firstName\": \"Nombre1\",\r\n    \"lastName\": \"Apellido2\",\r\n    \"email\": \"napellidogmail.com\",\r\n    \"phone\": \"+573004469987\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/persons",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"persons"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create person: valid information",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"123456\",\r\n    \"firstName\": \"Alejandra\",\r\n    \"lastName\": \"Perea\",\r\n    \"email\": \"aperea@gmail.com\",\r\n    \"phone\": \"+57-3004469987\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/persons",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"persons"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Update person",
+					"item": [
+						{
+							"name": "Update person: wrong Id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"83969\",\r\n    \"email\": \"napellido@gmail.com\",\r\n    \"phone\": \"+57-3004469987\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/persons",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"persons"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update person: wrong phone",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"8396318\",\r\n    \"email\": \"napellido@gmail.com\",\r\n    \"phone\": \"+573004469987\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/persons",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"persons"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create person: wrong email",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"8396318\",\r\n    \"email\": \"napellidogmail.com\",\r\n    \"phone\": \"+57-3004469987\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/persons",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"persons"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create person: wrong some things",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"83963\",\r\n    \"email\": \"napellidogmail.com\",\r\n    \"phone\": \"+573004469987\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/persons",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"persons"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create person: valid information",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"123456\",\r\n    \"email\": \"napellido@gmail.com\",\r\n    \"phone\": \"+57-3004469911\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/persons",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"persons"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get person",
+					"item": [
+						{
+							"name": "Get person: Id not found",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/persons/12345678",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"persons",
+										"12345678"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get person: Id invalid",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/persons/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"persons",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get person: Id found",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/persons/123456",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"persons",
+										"123456"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "Get account",
+					"item": [
+						{
+							"name": "Get account: Id not found",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/accounts/111111111111111",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"111111111111111"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get account: Id wrong",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/accounts/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get account: Id found",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/accounts/163241413574597",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"163241413574597"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Create account",
+					"item": [
+						{
+							"name": "Create account: wrong IdPerson",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"initialBalance\": 200000,\r\n    \"owner\":{\r\n        \"id\": \"9396\",\r\n        \"firstName\": \"Nombre\",\r\n        \"lastName\": \"Apellido\",\r\n        \"email\": \"napellido@gmail.com\",\r\n        \"phone\": \"+57-3004469987\"\r\n    }\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/accounts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create account: wrong initialBalance",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"initialBalance\": -1,\r\n    \"owner\":{\r\n        \"id\": \"9396323\",\r\n        \"firstName\": \"Nombre\",\r\n        \"lastName\": \"Apellido\",\r\n        \"email\": \"napellido@gmail.com\",\r\n        \"phone\": \"+57-3004469987\"\r\n    }\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/accounts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create account: person null",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"initialBalance\": 200000,\r\n    \"owner\": null\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/accounts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create account: wrong name",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"initialBalance\": 200000,\r\n    \"owner\":{\r\n        \"id\": \"9396213\",\r\n        \"firstName\": \"Nombre1\",\r\n        \"lastName\": \"Apellido\",\r\n        \"email\": \"napellido@gmail.com\",\r\n        \"phone\": \"+57-3004469987\"\r\n    }\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/accounts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create account: wrong lastname",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"initialBalance\": 200000,\r\n    \"owner\":{\r\n        \"id\": \"9396213\",\r\n        \"firstName\": \"Nombre\",\r\n        \"lastName\": \"Apellido4\",\r\n        \"email\": \"napellido@gmail.com\",\r\n        \"phone\": \"+57-3004469987\"\r\n    }\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/accounts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create account: wrong phone",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"initialBalance\": 200000,\r\n    \"owner\":{\r\n        \"id\": \"9396213\",\r\n        \"firstName\": \"Nombre\",\r\n        \"lastName\": \"Apellido\",\r\n        \"email\": \"napellido@gmail.com\",\r\n        \"phone\": \"+573004469987\"\r\n    }\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/accounts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create account: wrong email",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"initialBalance\": 200000,\r\n    \"owner\":{\r\n        \"id\": \"9396213\",\r\n        \"firstName\": \"Nombre\",\r\n        \"lastName\": \"Apellido\",\r\n        \"email\": \"napellidogmail.com\",\r\n        \"phone\": \"+57-3004469987\"\r\n    }\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/accounts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create account: wrong some things",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"initialBalance\": 200000,\r\n    \"owner\":{\r\n        \"id\": \"93963\",\r\n        \"firstName\": \"Nombre1\",\r\n        \"lastName\": \"Apellido\",\r\n        \"email\": \"napellidogmail.com\",\r\n        \"phone\": \"+573004469987\"\r\n    }\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/accounts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Account: valid information, new person",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"initialBalance\": 0,\r\n    \"owner\":{\r\n        \"id\": \"9396323\",\r\n        \"firstName\": \"Nombre\",\r\n        \"lastName\": \"Apellido\",\r\n        \"email\": \"napellido@gmail.com\",\r\n        \"phone\": \"+57-3004469987\"\r\n    }\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/accounts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Account: valid information, no new person",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"initialBalance\": 0,\r\n    \"owner\":{\r\n        \"id\": \"123456\",\r\n        \"firstName\": \"Alejandra\",\r\n        \"lastName\": \"Perea\",\r\n        \"phone\": \"+57-3004469911\",\r\n        \"email\": \"napellido@gmail.com\"\r\n    }\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/accounts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Deposit",
+					"item": [
+						{
+							"name": "Deposit to no existing account",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\": 2000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/accounts/805978001196281",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"805978001196281"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deposit with not valid amount",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\": 1000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/accounts/805978001196280",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"805978001196280"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Successful deposit",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\": 10000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/accounts/163241413574597",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"163241413574597"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Transfer",
+					"item": [
+						{
+							"name": "Transfer invalid account numbers",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sourceAccountNumber\": 1,\r\n    \"destinationAccountNumber\": 2,\r\n    \"amount\": 10000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/accounts/transfer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"transfer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Transfer invalid amount",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sourceAccountNumber\": 805978001196280,\r\n    \"destinationAccountNumber\": 805978001196281,\r\n    \"amount\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/accounts/transfer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"transfer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Transfer invalid amount and accounts",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sourceAccountNumber\": 1,\r\n    \"destinationAccountNumber\": 2,\r\n    \"amount\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/accounts/transfer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"transfer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Transfer no existing account",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sourceAccountNumber\": 879004672365429,\r\n    \"destinationAccountNumber\": 805978001196282,\r\n    \"amount\": 10000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/accounts/transfer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"transfer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Transfer accounts equals",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sourceAccountNumber\": 163241413574597,\r\n    \"destinationAccountNumber\": 163241413574597,\r\n    \"amount\": 10000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/accounts/transfer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"transfer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Transfer  no enough balance",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sourceAccountNumber\": 584607781078392,\r\n    \"destinationAccountNumber\": 163241413574597,\r\n    \"amount\": 10000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/accounts/transfer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"transfer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Transfer  successful",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sourceAccountNumber\": 163241413574597,\r\n    \"destinationAccountNumber\": 584607781078392,\r\n    \"amount\": 2000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/accounts/transfer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"transfer"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Pocket",
+			"item": [
+				{
+					"name": "Get pocket",
+					"item": [
+						{
+							"name": "Get pocket: Id not found",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/accounts/1/pockets",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"1",
+										"pockets"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get pocket: Id wrong",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/accounts/1/pockets",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"1",
+										"pockets"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get pocket: Id found without pockets",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/accounts/879014672365729/pockets",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"879014672365729",
+										"pockets"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get pocket: successful",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/accounts/163241413574597/pockets",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"accounts",
+										"163241413574597",
+										"pockets"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Create pockets",
+					"item": [
+						{
+							"name": "Create pocket: wrong account number",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": 13678,\r\n    \"name\": \"Vacaciones\",\r\n    \"initialBalance\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/pockets",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"pockets"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create pocket: wrong name",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": 879014672365420,\r\n    \"name\": \"Vacacio1nes\",\r\n    \"initialBalance\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/pockets",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"pockets"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create pocket: wrong initial balance",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": 879014672365420,\r\n    \"name\": \"Vacaciones\",\r\n    \"initialBalance\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/pockets",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"pockets"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create pocket: wrong some things",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": 8790146723652,\r\n    \"name\": \"Vacacion1es\",\r\n    \"initialBalance\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/pockets",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"pockets"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create pocket: valid information, not existing account",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": 879014672365420,\r\n    \"name\": \"Vacaciones\",\r\n    \"initialBalance\": 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/pockets",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"pockets"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create pocket: valid information, no enough balance",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": 584607781078392,\r\n    \"name\": \"Vacaciones\",\r\n    \"initialBalance\": 5000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/pockets",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"pockets"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create pocket: valid information, enough balance",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": 163241413574597,\r\n    \"name\": \"Vacaciones\",\r\n    \"initialBalance\": 1000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/pockets",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"pockets"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Transfer",
+					"item": [
+						{
+							"name": "Transfer invalid account numbers",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": 1,\r\n    \"pocketNumber\": 2,\r\n    \"amount\": 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/pockets/transfer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"pockets",
+										"transfer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Transfer invalid amount",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": 879014672365429,\r\n    \"pocketNumber\": 1,\r\n    \"amount\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/pockets/transfer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"pockets",
+										"transfer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Transfer no existing account",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": 179014672365429,\r\n    \"pocketNumber\": 1,\r\n    \"amount\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/pockets/transfer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"pockets",
+										"transfer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Transfer no existing pocket number",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": 584607781078392,\r\n    \"pocketNumber\": 1,\r\n    \"amount\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/pockets/transfer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"pockets",
+										"transfer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Transfer existing pocket number, not enough balance",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": 163241413574597,\r\n    \"pocketNumber\": 1,\r\n    \"amount\": 9000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/pockets/transfer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"pockets",
+										"transfer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Transfer successful",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": 163241413574597,\r\n    \"pocketNumber\": 1,\r\n    \"amount\": 1000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/pockets/transfer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"pockets",
+										"transfer"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
