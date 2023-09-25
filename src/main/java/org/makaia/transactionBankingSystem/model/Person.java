@@ -40,11 +40,11 @@ public class Person {
         this.id = id;
     }
 
-    public String getName() {
+    public String getFirstName() {
         return firstName;
     }
 
-    public void setName(String name) {
+    public void setFirstName(String name) {
         this.firstName = name;
     }
 
