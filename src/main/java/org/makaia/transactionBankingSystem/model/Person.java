@@ -14,7 +14,7 @@ public class Person {
     @Column(name = "lastName", nullable = false)
     private String lastName;
     @Column(name = "phone", nullable = false)
-    private int phone;
+    private String phone;
     @Column(name = "email", nullable = false)
     private String email;
 
@@ -24,7 +24,7 @@ public class Person {
     public Person() {
     }
 
-    public Person(String id, String firstName, String lastName, int phone, String email) {
+    public Person(String id, String firstName, String lastName, String phone, String email) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -56,11 +56,11 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
