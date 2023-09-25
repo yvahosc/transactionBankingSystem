@@ -75,12 +75,12 @@ public class AccountService {
 
         Person existingPerson = getPersonById(dtoAccountCreation.getOwner().getId());
         if(existingPerson != null){
-            Account account = new Account(Math.round(100000000 + Math.random() * 999999999999999L),
+            Account account = new Account(Math.round(100000000000000L + Math.random() * 999999999999999L),
                     dtoAccountCreation.getInitialBalance(), dtoAccountCreation.getOwner());
             return ResponseEntity.ok(this.accountRepository.save(account));
         }else{
             ResponseEntity<Person> createdPerson = createPerson(dtoAccountCreation.getOwner());
-            Account account = new Account(Math.round(100000000 + Math.random() * 999999999999999L),
+            Account account = new Account(Math.round(100000000000000L + Math.random() * 999999999999999L),
                     dtoAccountCreation.getInitialBalance(), createdPerson.getBody());
             return ResponseEntity.ok(this.accountRepository.save(account));
         }
