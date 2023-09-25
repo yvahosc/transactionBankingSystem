@@ -8,7 +8,7 @@ import java.util.List;
 public class Person {
 
     @Id
-    private Long id;
+    private String id;
     @Column(name = "firstName", nullable = false)
     private String firstName;
     @Column(name = "lastName", nullable = false)
@@ -24,7 +24,7 @@ public class Person {
     public Person() {
     }
 
-    public Person(Long id, String firstName, String lastName, int phone, String email) {
+    public Person(String id, String firstName, String lastName, int phone, String email) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -32,11 +32,11 @@ public class Person {
         this.email = email;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

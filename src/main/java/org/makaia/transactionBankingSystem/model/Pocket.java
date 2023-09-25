@@ -1,29 +1,36 @@
 package org.makaia.transactionBankingSystem.model;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Entity
 @Table(name = "pocket")
 public class Pocket {
 
     @Id
-    private String number_pocket;
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Long numberPocket;
     @Column(name = "name", nullable = false)
     private String name;
-    @Column(name = "balance", nullable = false)
-    private double balance;
+    @Column(name = "amount", nullable = false)
+    private BigDecimal amount;
     @ManyToOne()
     private Account account;
 
     public Pocket() {
     }
-
-    public String getNumber_pocket() {
-        return number_pocket;
+    public Pocket(String name, BigDecimal amount, Account account) {
+        this.name = name;
+        this.amount = amount;
+        this.account = account;
     }
 
-    public void setNumber_pocket(String number_pocket) {
-        this.number_pocket = number_pocket;
+    public Long getNumberPocket() {
+        return numberPocket;
+    }
+
+    public void setNumber_pocket(Long numberPocket) {
+        this.numberPocket = numberPocket;
     }
 
     public String getName() {
@@ -34,12 +41,12 @@ public class Pocket {
         this.name = name;
     }
 
-    public double getBalance() {
-        return balance;
+    public BigDecimal getAmount() {
+        return amount;
     }
 
-    public void setBalance(double balance) {
-        this.balance = balance;
+    public void setAmount(BigDecimal amount) {
+        this.amount = amount;
     }
 
     public Account getAccount() {

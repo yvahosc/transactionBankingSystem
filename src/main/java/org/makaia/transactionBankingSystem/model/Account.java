@@ -1,6 +1,7 @@
 package org.makaia.transactionBankingSystem.model;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.List;
 
 @Entity
@@ -10,7 +11,7 @@ public class Account {
     @Id
     private Long accountNumber;
     @Column(name = "balance", nullable = false)
-    private double balance;
+    private BigDecimal balance;
 
     @ManyToOne()
     private Person person;
@@ -23,6 +24,12 @@ public class Account {
 
     }
 
+    public Account(Long accountNumber, BigDecimal balance, Person person) {
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+        this.person = person;
+    }
+
     public Long getAccountNumber() {
         return accountNumber;
     }
@@ -31,11 +38,11 @@ public class Account {
         this.accountNumber = accountNumber;
     }
 
-    public double getBalance() {
+    public BigDecimal getBalance() {
         return balance;
     }
 
-    public void setBalance(double balance) {
+    public void setBalance(BigDecimal balance) {
         this.balance = balance;
     }
 
